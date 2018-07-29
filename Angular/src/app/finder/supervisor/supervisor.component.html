@@ -1,0 +1,9 @@
+<table class="table table-sm table-hover">
+    <tr *ngFor="let employee of employeeService.supervisorList">
+      <td>
+          <a class="btn" (click)="showEmployeeList(employee.Id)">
+              {{employee.EmailID}}
+            </a>
+      </td>
+    </tr>
+  </table>

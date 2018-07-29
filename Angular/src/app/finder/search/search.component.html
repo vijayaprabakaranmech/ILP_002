@@ -1,0 +1,11 @@
+<form class="emp-form" #searchForm = "ngForm" (ngSubmit)="onSubmit(searchForm)">
+<div class="form-row">
+  <div class="form-group col-md-8">
+    <input class="form-control" name="EmailID" #EmailID="ngModel" [(ngModel)]="employeeService.SearchID" placeholder="Email ID" required>
+    <div class="validation-error" *ngIf="EmailID.invalid && EmailID.touched">Required.</div>
+  </div>
+  <div class="form-group col-md-4">
+      <button [disabled]="!searchForm.valid" type="submit" class="btn btn-md btn-block btn-info">Search</button>
+  </div>
+</div>
+</form>
